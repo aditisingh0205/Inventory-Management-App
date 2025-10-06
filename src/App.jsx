@@ -66,7 +66,7 @@ export default function App() {
   const [sideBarOpen, setSideBarOpen] = useState(false);
 
   return (
-   
+    
       <div className="flex h-screen bg-gray-100 font-sans">
         {/* Sidebar */}
         <div

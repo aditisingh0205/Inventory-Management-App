@@ -15,6 +15,7 @@ const productsSlice = createSlice({
     items: [],
     status: "idle",
     error: null,
+    orders: [],
   },
   reducers: {
   deleteProduct: (state, action) => {
@@ -29,6 +30,11 @@ const productsSlice = createSlice({
   addProduct: (state, action) => {
     state.items.push(action.payload);
   },
+  addOrders: (state,action) =>{
+    const{productId, quantity} = action.payload;
+    const product = state.items.find((p)=> p.id===productId);
+    
+  }
 },
 
   extraReducers: (builder) => {

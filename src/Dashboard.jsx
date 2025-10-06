@@ -152,7 +152,7 @@ export default function Dashboard() {
         <h2 className="text-lg font-semibold mb-2 text-gray-800">Low Stock Items</h2>
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50">
+            <thead className="bg-gray-200">
               <tr>
                 <th className="px-4 py-2 text-left text-gray-600">Product Name</th>
                 <th className="px-4 py-2 text-left text-gray-600">Category</th>
