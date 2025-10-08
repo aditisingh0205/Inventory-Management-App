@@ -144,7 +144,7 @@ export default function Dashboard() {
 
       {/* Low Stock Table */}
       <motion.div
-        className="bg-white p-6 rounded-lg shadow hover:shadow-xl transition"
+        className="w-full table-auto divide-y divide-gray-200 text-sm bg-white p-6 rounded-lg shadow hover:shadow-xl transition"
         variants={itemVariants}
         initial="hidden"
         animate="visible"
@@ -182,13 +182,13 @@ export default function Dashboard() {
 
       {/* Recent Activity + Insights */}
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 gap-4"
+        className="w-full "
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         {/* Recent Activity */}
-        <motion.div className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition" variants={itemVariants}>
+        <motion.div className="w-full bg-white p-4 rounded-lg shadow hover:shadow-lg transition" variants={itemVariants}>
           <h2 className="text-gray-800 font-semibold mb-2">Recent Activity</h2>
           <ul className="space-y-1 text-sm text-gray-700">
             {recentActivity.length === 0 ? (
@@ -209,14 +209,7 @@ export default function Dashboard() {
         </motion.div>
 
         {/* Smart Insights */}
-        <motion.div className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition" variants={itemVariants}>
-          <h2 className="text-gray-800 font-semibold mb-2">Smart Insights</h2>
-          <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
-            <li>Top 5 products cover 80% of total sales.</li>
-            <li>3 products unsold for 30+ days — check pricing.</li>
-            <li>Overall stock turnover up 12% this week.</li>
-          </ul>
-        </motion.div>
+       
       </motion.div>
 
       {/* Footer */}

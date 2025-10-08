@@ -134,7 +134,7 @@ export default function Products() {
             placeholder="Search by name"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="p-2 border rounded shadow"
+            className="p-2 border rounded shadow flex-1 min-w-[120px]"
           />
 
           <select
@@ -150,7 +150,7 @@ export default function Products() {
           </select>
 
           <button
-            className="p-2 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition"
+            className="p-2 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition md:flex-none"
             onClick={() => setSortField("stock")}
           >
             Sort by Stock

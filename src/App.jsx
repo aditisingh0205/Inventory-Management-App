@@ -48,16 +48,25 @@ function Header({ sideBarOpen, setSideBarOpen }) {
         >
           <BsMenuButtonWideFill size={22} />
         </button>
-        <div className="hidden md:flex items-center gap-3">
-          {icon}
-          <div>
-            <h1 className="text-2xl font-bold text-gray-800">{title}</h1>
-            <div className="mt-1 text-gray-500 text-sm">
-              {subtitle} - {new Date().toLocaleDateString()}
-            </div>
-          </div>
+         <div className="flex items-center gap-2 md:hidden">
+      {icon}
+      <div>
+        <h1 className="text-lg font-bold text-gray-800">{title}</h1>
+        <div className="text-gray-500 text-xs">{subtitle}</div>
+      </div>
+    </div>
+
+    {/* Desktop view */}
+    <div className="hidden md:flex items-center gap-3">
+      {icon}
+      <div>
+        <h1 className="text-2xl font-bold text-gray-800">{title}</h1>
+        <div className="mt-1 text-gray-500 text-sm">
+          {subtitle} - {new Date().toLocaleDateString()}
         </div>
       </div>
+    </div>
+  </div>
     </header>
   );
 }
@@ -80,6 +89,9 @@ export default function App() {
           <nav className="p-6 space-y-4">
             <NavLink
               to="/dashboard"
+              onClick={() => {
+    if (window.innerWidth < 768) setSideBarOpen(false);
+  }}
               className={({ isActive }) =>
                 `block px-4 py-2 rounded flex items-center gap-2 ${
                   isActive ? "bg-gray-700 text-white" : "hover:bg-gray-700"
@@ -91,6 +103,9 @@ export default function App() {
 
             <NavLink
               to="/products"
+              onClick={() => {
+    if (window.innerWidth < 768) setSideBarOpen(false);
+  }}
               className={({ isActive }) =>
                 `block px-4 py-2 rounded flex items-center gap-2 ${
                   isActive ? "bg-gray-700 text-white" : "hover:bg-gray-700"
@@ -102,6 +117,9 @@ export default function App() {
 
             <NavLink
               to="/orders"
+              onClick={() => {
+    if (window.innerWidth < 768) setSideBarOpen(false);
+  }}
               className={({ isActive }) =>
                 `block px-4 py-2 rounded flex items-center gap-2 ${
                   isActive ? "bg-gray-700 text-white" : "hover:bg-gray-700"
@@ -113,6 +131,9 @@ export default function App() {
 
             <NavLink
               to="/reports"
+              onClick={() => {
+    if (window.innerWidth < 768) setSideBarOpen(false);
+  }}
               className={({ isActive }) =>
                 `block px-4 py-2 rounded flex items-center gap-2 ${
                   isActive ? "bg-gray-700 text-white" : "hover:bg-gray-700"
